@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="container">
+<h1 class='center'>{{article.title}}</h1>
+<h3 class='center'> {{article.subtitle}}</h3>
+<p>{{article.body}}</p>
+<small class='right'>{{article.author}}</small>
+</div>
+
+{% endblock %}

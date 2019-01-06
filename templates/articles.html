@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container">
+  <div class="row">
+    {% for article in articles %}
+    <div class="col s12 m6">
+      <div class="card ">
+  <div class="card-content ">
+    <span class="card-title">{{article.title}}</span>
+    <small>{{article.subtitle}}</small>
+    <p>{{article.body[:50]}}</p>
+    <p class="right">{{article.author}}</p>
+  </div>
+  <div class="card-action">
+    <a href="{{url_for('article',id=loop.index)}}">Read More</a>
+
+  </div>
+  </div>
+</div>
+{% endfor %}
+    </div>
+  </div>
+
+
+
+{% endblock %}

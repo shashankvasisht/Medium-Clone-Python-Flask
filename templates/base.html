@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial 2</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='materialize/css/materialize.min.css')}}">
+    <script src = "{{url_for('static', filename='materialize/js/materialize.min.js')}}"></script>
+  </head>
+  <body>
+    {% block content %}  {% endblock %}
+  </body>
+  </html>
